@@ -8,8 +8,84 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
 
+  <header class="header">
+    <div class="header__inner">
+      <a class="logo" href="#">
+        <img class="logo__image" src="images/logo-black.png" alt="логотип">
+      </a>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__list-item"><a class="menu__link" href="#">Главная</a></li>
+          <li class="menu__list-item"><a class="menu__link" href="#">О компании</a></li>
+          <li class="menu__list-item"><a class="menu__link" href="#">Продукция</a></li>
+          <li class="menu__list-item"><a class="menu__link" href="#">Рецепты</a></li>
+          <li class="menu__list-item"><a class="menu__link" href="#">Контакты</a></li>
+        </ul>
+      </nav>
+      <a class="header__button" href="#">Оставить заявку</a>
+    </div>
+  </header>
+  <div class="wrapper">
+
+    <main class="main">
+      <section class="section main-screen">
+        <div class="container">
+          <h1 class="main-screen__title">
+            <span class="main-screen__title--orange">Первые</span> сыроделы <br>
+            в Санкт-Петербурге
+          </h1>
+          <span class="main-screen__subtitle">
+            Основано в 2002 году
+          </span>
+        </div>
+        <div class="main-screen__bottom">
+          <span class="main-screen__scroll">scroll</span>
+          <span class="main-screen__text">© Copyright 2020 ДЭНМАКС</span>
+          <div class="social">
+            <a class="social__vk">vk</a>
+            <a class="social__instagram">instagram</a>
+            <a class="social__facebook">facebook</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section products">
+        <div class="container">
+          <div class="products__inner">
+            <h2 class="products__title">Наша продукция</h2>
+            <div class="products__items swiper-container">
+              <div class="products__wrapper swiper-wrapper">
+                <div class="products__item swiper-slide">
+                  <img class="products__item-image" src="images/products/item1.jpg" alt="продукты">
+                  <div class="products__item-title">Мягкий</div>
+                </div>
+                <div class="products__item swiper-slide">
+                  <img class="products__item-image" src="images/products/item2.jpg" alt="продукты">
+                  <div class="products__item-title">Мягкий для жарки</div>
+                </div>
+                <div class="products__item swiper-slide">
+                  <img class="products__item-image" src="images/products/item3.jpg" alt="продукты">
+                  <div class="products__item-title">Мягкий копчёный</div>
+                </div>
+              </div>
+            </div>
+            <div class="products__item-bprev"></div>
+            <div class="products__item-bnext"></div>
+            <p class="products__text">
+              Мягкий сыр - один из самых нежирных. Это делает его незаменимым
+              продуктом в диетическом питании. Соль в нем присутствует
+              в минимальных количествах. Полезен благодаря оптимальному
+              аминокислотному составу и большому содержанию белка, кальция
+              и фосфора.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
 
 
 

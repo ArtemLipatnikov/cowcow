@@ -1,3 +1,261 @@
 @import "fonts";
 @import "vars";
 @import "global";
+
+//start header main-screen
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 1625px;
+  width: 100%;
+  padding: 0 15px;
+  z-index: 10;
+  &__inner {
+    display: flex;
+  }
+
+  &__button {
+    margin-top: 37px;
+    margin-left: auto;
+    width: 230px;
+    height: 48px;
+    padding: 14px 10px;
+    @include coco400;
+    font-size: 18px;
+    background-color: #ffcc01;
+    border-radius: 24px;
+    text-align: center;
+    color: #ffffff;
+    &:hover,
+    &:focus {
+      color: #000000;
+    }
+    &:active {
+      color: red;
+    }
+  }
+}
+
+.logo {
+  padding-top: 33px;
+  margin-right: 116px;
+}
+
+.menu {
+  padding-top: 52px;
+  &__list {
+    display: flex;
+  }
+
+  &__list-item {
+    & + & {
+      margin-left: 50px;
+    }
+  }
+
+  &__link {
+    @include coco400;
+    font-size: 18px;
+    color: #000000;
+    position: relative;
+    border-bottom: 3px solid transparent;
+    &:hover,
+    &:focus {
+      color: $orange;
+      border-bottom: 3px solid $orange;
+    }
+    &:active {
+      color: red;
+      border-bottom: 3px solid red;
+    }
+  }
+}
+
+.main-screen {
+  height: 100vh;
+  background-image: url(../images/background/main-screen.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__title {
+    padding-top: 200px;
+    margin-bottom: 20px;
+    @include j600;
+    font-size: 85px;
+    line-height: 95px;
+    color: #ffffff;
+    &--orange {
+      color: $orange;
+    }
+  }
+
+  &__subtitle {
+    font-size: 25px;
+    color: #ffffff;
+    padding-left: 95px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 3px;
+      width: 66px;
+      height: 3px;
+      background-color: $orange;
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    display: flex;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 1625px;
+    width: 100%;
+    padding: 0 15px;
+    color: #ffffff;
+  }
+
+  &__scroll {
+    position: relative;
+    padding-left: 30px;
+    margin-right: 135px;
+    font-size: 18px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -3px;
+      left: 0;
+      background-image: url(../images/icon/sprite.png);
+      background-position: -78px -50px;
+      width: 18px;
+      height: 26px;
+    }
+  }
+}
+
+.social {
+  margin-left: auto;
+  margin-bottom: 55px;
+  font-size: 0;
+  &__vk,
+  &__instagram,
+  &__facebook {
+    background-image: url(../images/icon/sprite.png);
+    background-position: -24px -54px;
+    width: 22px;
+    height: 23px;
+    cursor: pointer;
+  }
+
+  &__instagram {
+    background-image: url(../images/icon/sprite.png);
+    background-position: -78px 0px;
+    margin-left: 29px;
+  }
+
+  &__facebook {
+    background-image: url(../images/icon/sprite.png);
+    background-position: -46px -54px;
+    margin-left: 29px;
+  }
+}
+
+//end header main-screen
+//products
+
+.products {
+  height: 100vh;
+  text-align: center;
+  color: #4a4948;
+  &__inner {
+    position: relative;
+  }
+
+  &__title {
+    padding-top: 175px;
+    margin-bottom: 100px;
+    @include j500;
+    font-size: 70px;
+    line-height: 95px;
+  }
+
+  &__items {
+    min-height: 500px;
+  }
+
+  &__item {
+    margin-bottom: 35px;
+  }
+
+  &__item-image {
+    margin-bottom: 50px;
+    width: 242px;
+    height: 255px;
+    object-fit: fill;
+    transition: all 1s;
+  }
+
+
+  &__item-title {
+    @include coco700;
+    font-size: 25px;
+    transition: all 1s;
+  }
+
+  &__item-bprev,
+  &__item-bnext {
+    position: absolute;
+    top: 50%;
+    width: 17px;
+    height: 32px;
+    background-image: url(../images/icon/arr-left.png);
+    cursor: pointer;
+    outline: none;
+  }
+
+  &__item-bprev {
+    left: -50px;
+  }
+
+  &__item-bnext {
+    right: -50px;
+    background-image: url(../images/icon/arr-right.png);
+  }
+
+  &__text {
+    max-width: 600px;
+    margin: 0 auto;
+    @include coco400;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .swiper-slide-active {
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translate(-50%);
+      width: 80px;
+      height: 3px;
+      background-color: $orange;
+    }
+    .products__item-title {
+      font-size: 35px;
+    }
+  }
+
+  .swiper-slide-active img{
+    height: 300px;
+    width: 300px;
+    position: relative;
+  }
+}
+
+//end products

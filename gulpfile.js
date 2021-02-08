@@ -42,6 +42,7 @@ function scripts() {
   return src([
     'node_modules/jquery/dist/jquery.js',
     'node_modules/swiper/swiper-bundle.js',
+    'node_modules/fullpage.js/dist/fullpage.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -54,7 +55,8 @@ function scripts() {
 function styles() {
   return src([
     'node_modules/normalize.css/normalize.css',
-    'node_modules/swiper/swiper.min.css',
+    'node_modules/swiper/swiper-bundle.css',
+    'node_modules/fullpage.js/dist/fullpage.css',
     'app/scss/style.scss'
   ])
     .pipe(scss({ outputStyle: 'compressed' }))
