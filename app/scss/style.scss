@@ -17,25 +17,9 @@
     display: flex;
   }
 
-  &__button {
+  &__link {
     margin-top: 37px;
     margin-left: auto;
-    width: 230px;
-    height: 48px;
-    padding: 14px 10px;
-    @include coco400;
-    font-size: 18px;
-    background-color: #ffcc01;
-    border-radius: 24px;
-    text-align: center;
-    color: #ffffff;
-    &:hover,
-    &:focus {
-      color: #000000;
-    }
-    &:active {
-      color: red;
-    }
   }
 }
 
@@ -75,13 +59,12 @@
 }
 
 .main-screen {
-  height: 100vh;
   background-image: url(../images/background/main-screen.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   &__title {
-    padding-top: 200px;
+    padding-top: 500px;
     margin-bottom: 20px;
     @include j600;
     font-size: 85px;
@@ -98,7 +81,7 @@
     padding-left: 95px;
     position: relative;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 8px;
       left: 3px;
@@ -126,7 +109,7 @@
     margin-right: 135px;
     font-size: 18px;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: -3px;
       left: 0;
@@ -179,9 +162,6 @@
   &__title {
     padding-top: 175px;
     margin-bottom: 100px;
-    @include j500;
-    font-size: 70px;
-    line-height: 95px;
   }
 
   &__items {
@@ -199,7 +179,6 @@
     object-fit: fill;
     transition: all 1s;
   }
-
 
   &__item-title {
     @include coco700;
@@ -237,7 +216,7 @@
 
   .swiper-slide-active {
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       bottom: 50px;
       left: 50%;
@@ -251,7 +230,7 @@
     }
   }
 
-  .swiper-slide-active img{
+  .swiper-slide-active img {
     height: 300px;
     width: 300px;
     position: relative;
@@ -259,3 +238,254 @@
 }
 
 //end products
+//start advantages
+
+.advantages {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: $orange;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 390px;
+  }
+
+  &__inner {
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      background-image: url(../images/advantages/background.jpg);
+      background-repeat: no-repeat;
+      width: 591px;
+      height: 407px;
+      bottom: 0;
+      right: -220px;
+    }
+  }
+
+  &__title {
+    padding-top: 200px;
+    margin-bottom: 54px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 650px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 325px;
+    width: 100%;
+  }
+
+  &__number {
+    display: block;
+    color: $orange;
+    @include j500;
+    font-size: 40px;
+    line-height: 60px;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    margin-bottom: 45px;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .quality {
+    padding-top: 60px;
+    color: #ffffff;
+    &__inner {
+      position: relative;
+      max-width: 520px;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/advantages/milk.png);
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        top: -280px;
+        left: 120%;
+        width: 815px;
+        height: 621px;
+      }
+    }
+
+    &__title {
+      color: #ffffff;
+      line-height: 50px;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      @include coco400;
+      font-size: 20px;
+      line-height: 25px;
+      margin-bottom: 50px;
+    }
+
+    &__link {
+      position: relative;
+      @include coco400;
+      font-size: 20px;
+      line-height: 30px;
+      color: #ffffff;
+      &::before {
+        content: "";
+        position: absolute;
+        background-image: url(../images/icon/sprite.png);
+        width: 78px;
+        height: 24px;
+        top: 3px;
+        left: 95px;
+      }
+    }
+  }
+}
+
+//end advantages
+//start hypermarket
+
+.hypermarket {
+  background-color: #f1f1f3;
+  &__inner {
+    padding-top: 185px;
+  }
+
+  &__title {
+    max-width: 590px;
+    margin-bottom: 50px;
+    line-height: 70px;
+  }
+
+  &__text {
+    margin-bottom: 80px;
+  }
+
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 233px;
+    height: 248px;
+    text-align: center;
+    background-color: #ffffff;
+    cursor: pointer;
+    &:hover {
+      background-color: #faad28;
+    }
+    &--grey {
+      background-color: #efefef;
+    }
+  }
+
+  &__item-image {
+    padding-top: 100px;
+    margin-bottom: 40px;
+  }
+
+  &__item-title {
+    @include coco700;
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+}
+
+//end hypermarket
+//start connection
+
+.connection {
+  &__title {
+    max-width: 800px;
+    padding-top: 300px;
+    margin-bottom: 50px;
+  }
+}
+
+//ens connection
+//start footer
+
+.footer {
+  position: relative;
+  background-color: #f1f1f3;
+  &__wrapper {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: $orange;
+  }
+
+  &__inner {
+    color: #ffffff;
+  }
+
+  &__top {
+    padding-top: 55px;
+    padding-bottom: 20px;
+    display: flex;
+    border-bottom: 1px solid #ffffff;
+  }
+
+  &__logo {
+    margin-right: auto;
+    width: 96px;
+    height: 47px;
+  }
+
+  &__list {
+    column-count: 2;
+    column-gap: 60px;
+    margin-right: 70px;
+  }
+
+  &__link,
+  &__contacts-tel,
+  &__contacts-mail,
+  &__address {
+    @include coco400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #ffffff;
+    &:hover,
+    &:focus {
+      color: #ff0000;
+    }
+    &:active {
+      color: #000000;
+    }
+  }
+
+  &__contacts {
+    max-width: 175px;
+    margin-right: 70px;
+  }
+
+  &__contacts-mail {
+    margin-bottom: 10px;
+  }
+
+  &__address {
+    max-width: 190px;
+    cursor: pointer;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 18px;
+    padding-bottom: 50px;
+  }
+}
+
+//end footer

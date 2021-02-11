@@ -2,7 +2,7 @@ $(function () {
   
   $('.wrapper').fullpage({
     //options here
-
+    verticalCentered: false
   });
 
   new Swiper('.products__items', {
